@@ -1,2 +1,2 @@
 # keypop-calypso-crypto-asymmetric-java-api
-Repository Eclipse Keypop project containing a Java implementation of Calypso Networks Association's reference Terminal Calypso Asymmetric Crypto API
+Eclipse Keypop project repository containing a Java implementation of the 'Calypso Asymmetric Crypto API' standardized by the Calypso Networks association for ticketing terminal processing smart card
