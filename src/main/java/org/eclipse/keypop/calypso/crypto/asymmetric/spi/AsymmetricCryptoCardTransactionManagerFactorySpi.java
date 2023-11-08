@@ -11,17 +11,17 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.spi;
 
 /**
- * Factory of {@link AsymmetricCryptoTransactionManagerSpi}.
+ * Factory of {@link AsymmetricCryptoCardTransactionManagerSpi}.
  *
  * @since 0.1.0
  */
-interface AsymmetricCryptoTransactionManagerFactorySpi {
+interface AsymmetricCryptoCardTransactionManagerFactorySpi {
 
   /**
-   * Returns a new instance of {@link AsymmetricCryptoTransactionManagerSpi}.
+   * Returns a new instance of {@link AsymmetricCryptoCardTransactionManagerSpi}.
    *
-   * @return A new instance of {@link AsymmetricCryptoTransactionManagerSpi}.
+   * @return A new instance of {@link AsymmetricCryptoCardTransactionManagerSpi}.
    * @since 0.1.0
    */
-  AsymmetricCryptoTransactionManagerSpi createTransactionManager();
+  AsymmetricCryptoCardTransactionManagerSpi createCardTransactionManager();
 }

@@ -17,11 +17,11 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.spi;
  * Calypso card when using asymmetric keys.
  *
  * <p>An instance of this interface can be obtained via the method {@link
- * AsymmetricCryptoTransactionManagerFactorySpi#createTransactionManager()}.
+ * AsymmetricCryptoCardTransactionManagerFactorySpi#createCardTransactionManager()}.
  *
  * @since 0.1.0
  */
-interface AsymmetricCryptoTransactionManagerSpi {
+interface AsymmetricCryptoCardTransactionManagerSpi {
 
   /**
    * Returns the public key of a card contains in a card certificate.
