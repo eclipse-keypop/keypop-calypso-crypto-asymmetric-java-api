@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"org.eclipse.keypop.calypso.crypto.asymmetric","c":"AsymmetricCryptoApiProperties","l":"VERSION"}]
