@@ -7,22 +7,20 @@
  *
  * SPDX-License-Identifier: MIT
  ****************************************************************************** */
-package org.eclipse.keypop.calypso.crypto.asymmetric;
+package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
 /**
- * API properties.
+ * SPI for Primary Certification Authority (PCA) certificate management.
  *
  * @since 0.1.0
  */
-public final class AsymmetricCryptoApiProperties {
+public interface PcaCertificateSpi {
 
   /**
-   * API version: {@value}
+   * Extracts the public key from the PCA certificate.
    *
+   * @return PublicKeySpi the public key extracted from the PCA certificate.
    * @since 0.1.0
    */
-  public static final String VERSION = "0.1";
-
-  /** Private constructor */
-  private AsymmetricCryptoApiProperties() {}
+  PublicKeySpi extractPublicKey();
 }

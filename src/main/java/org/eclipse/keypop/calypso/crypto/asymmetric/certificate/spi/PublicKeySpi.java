@@ -7,22 +7,30 @@
  *
  * SPDX-License-Identifier: MIT
  ****************************************************************************** */
-package org.eclipse.keypop.calypso.crypto.asymmetric;
+package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
+
+import java.security.PublicKey;
 
 /**
- * API properties.
+ * Represents an interface for a public key.
  *
  * @since 0.1.0
  */
-public final class AsymmetricCryptoApiProperties {
+public interface PublicKeySpi {
 
   /**
-   * API version: {@value}
+   * Retrieves the public key value.
    *
+   * @return The public key value.
    * @since 0.1.0
    */
-  public static final String VERSION = "0.1";
+  PublicKey getValue();
 
-  /** Private constructor */
-  private AsymmetricCryptoApiProperties() {}
+  /**
+   * Retrieves the reference of the public key as a byte array.
+   *
+   * @return The reference of the public key as a byte array.
+   * @since 0.1.0
+   */
+  byte[] getReference();
 }

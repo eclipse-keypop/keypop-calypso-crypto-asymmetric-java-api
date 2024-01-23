@@ -1,5 +1,5 @@
 /* ******************************************************************************
- * Copyright (c) 2023 Calypso Networks Association https://calypsonet.org/
+ * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/
  *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
@@ -7,7 +7,9 @@
  *
  * SPDX-License-Identifier: MIT
  ****************************************************************************** */
-package org.eclipse.keypop.calypso.crypto.asymmetric.spi;
+package org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi;
+
+import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKeySpi;
 
 /**
  * Calypso card asymmetric key cryptography service.
@@ -20,16 +22,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.spi;
  *
  * @since 0.1.0
  */
-interface AsymmetricCryptoCardTransactionManagerSpi {
-
-  /**
-   * Returns the public key of a card contains in a card certificate.
-   *
-   * @param cardCertificate The card certificate.
-   * @return A non-null byte array.
-   * @since 0.1.0
-   */
-  byte[] extractCardPublicKey(byte[] cardCertificate);
+public interface AsymmetricCryptoCardTransactionManagerSpi {
 
   /**
    * Starts a new session with a card.
@@ -37,7 +30,7 @@ interface AsymmetricCryptoCardTransactionManagerSpi {
    * @param cardPublicKey The public key of the card.
    * @since 0.1.0
    */
-  void initTerminalSessionSignature(byte[] cardPublicKey);
+  void initTerminalSessionSignature(CardPublicKeySpi cardPublicKey);
 
   /**
    * Updates the session signature computation with data sent or received from the card.
