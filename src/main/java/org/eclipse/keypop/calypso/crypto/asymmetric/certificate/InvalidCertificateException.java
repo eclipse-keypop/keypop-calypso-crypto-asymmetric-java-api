@@ -14,7 +14,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate;
  * during the cryptographic operation.
  *
  * @see RuntimeException
- * @since 0.1.0
+ * @since 0.2.0
  */
 public class InvalidCertificateException extends RuntimeException {
 
@@ -22,7 +22,7 @@ public class InvalidCertificateException extends RuntimeException {
    * Constructs an InvalidCertificateException with the specified detail message.
    *
    * @param message the detail message.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   public InvalidCertificateException(String message) {
     super(message);
@@ -35,7 +35,7 @@ public class InvalidCertificateException extends RuntimeException {
    *     Throwable.getMessage() method).
    * @param cause the cause (which is saved for later retrieval by the Throwable.getCause() method).
    *     (A null value is permitted, and indicates that the cause is nonexistent or unknown.)
-   * @since 0.1.0
+   * @since 0.2.0
    */
   public InvalidCertificateException(String message, Throwable cause) {
     super(message, cause);

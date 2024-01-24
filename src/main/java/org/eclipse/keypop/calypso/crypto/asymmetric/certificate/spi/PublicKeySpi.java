@@ -14,7 +14,7 @@ import java.security.PublicKey;
 /**
  * Represents an interface for a public key.
  *
- * @since 0.1.0
+ * @since 0.2.0
  */
 public interface PublicKeySpi {
 
@@ -22,7 +22,7 @@ public interface PublicKeySpi {
    * Retrieves the public key value.
    *
    * @return The public key value.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   PublicKey getValue();
 
@@ -30,7 +30,7 @@ public interface PublicKeySpi {
    * Retrieves the reference of the public key as a byte array.
    *
    * @return The reference of the public key as a byte array.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   byte[] getReference();
 }

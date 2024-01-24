@@ -12,7 +12,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 /**
  * SPI for card certificate management.
  *
- * @since 0.1.0
+ * @since 0.2.0
  */
 public interface CardCertificateSpi {
 
@@ -20,7 +20,7 @@ public interface CardCertificateSpi {
    * Retrieves the reference of the issuer's public key.
    *
    * @return byte array containing the reference of the issuer's public key.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   byte[] getIssuerPublicKeyReference();
 
@@ -29,7 +29,7 @@ public interface CardCertificateSpi {
    *
    * @param issuerPublicKey Public key of the issuer.
    * @return PublicKeySpi the public key extracted from the card certificate.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   CardPublicKeySpi extractPublicKey(PublicKeySpi issuerPublicKey);
 }

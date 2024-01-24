@@ -20,7 +20,7 @@ import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKe
  * <p>An instance of this interface can be obtained via the method {@link
  * AsymmetricCryptoCardTransactionManagerFactorySpi#createCardTransactionManager()}.
  *
- * @since 0.1.0
+ * @since 0.2.0
  */
 public interface AsymmetricCryptoCardTransactionManagerSpi {
 
@@ -28,7 +28,7 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    * Starts a new session with a card.
    *
    * @param cardPublicKey The public key of the card.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   void initTerminalSessionSignature(CardPublicKeySpi cardPublicKey);
 
@@ -36,7 +36,7 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    * Updates the session signature computation with data sent or received from the card.
    *
    * @param cardApdu A byte array containing either the input or output data of a card command APDU.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   void updateTerminalSessionSignature(byte[] cardApdu);
 
@@ -45,7 +45,7 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    *
    * @param cardSessionSignature The card session signature to check.
    * @return True if the card session is correct, false otherwise.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   boolean isCardSessionSignatureValid(byte[] cardSessionSignature);
 }

@@ -12,7 +12,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 /**
  * SPI for Certification Authority (CA) certificate management.
  *
- * @since 0.1.0
+ * @since 0.2.0
  */
 public interface CaCertificateSpi {
 
@@ -20,7 +20,7 @@ public interface CaCertificateSpi {
    * Retrieves the reference of the issuer's public key.
    *
    * @return byte array containing the reference of the issuer's public key.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   byte[] getIssuerPublicKeyReference();
 
@@ -29,7 +29,7 @@ public interface CaCertificateSpi {
    *
    * @param issuerPublicKey Public key of the issuer.
    * @return PublicKeySpi the public key extracted from the CA certificate.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   PublicKeySpi extractPublicKey(PublicKeySpi issuerPublicKey);
 }

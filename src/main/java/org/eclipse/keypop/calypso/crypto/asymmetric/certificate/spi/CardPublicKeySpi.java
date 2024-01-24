@@ -13,7 +13,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
  * This interface specifies the contract of card public keys. It provides a single method to fetch
  * raw public key values.
  *
- * @since 0.1.0
+ * @since 0.2.0
  */
 public interface CardPublicKeySpi {
 
@@ -21,7 +21,7 @@ public interface CardPublicKeySpi {
    * Get the raw value of the card's public key as a byte array.
    *
    * @return byte array representing the raw public key
-   * @since 0.1.0
+   * @since 0.2.0
    */
   byte[] getRawValue();
 }

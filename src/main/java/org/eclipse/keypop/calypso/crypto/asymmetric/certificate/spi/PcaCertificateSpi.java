@@ -12,7 +12,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 /**
  * SPI for Primary Certification Authority (PCA) certificate management.
  *
- * @since 0.1.0
+ * @since 0.2.0
  */
 public interface PcaCertificateSpi {
 
@@ -20,7 +20,7 @@ public interface PcaCertificateSpi {
    * Extracts the public key from the PCA certificate.
    *
    * @return PublicKeySpi the public key extracted from the PCA certificate.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   PublicKeySpi extractPublicKey();
 }

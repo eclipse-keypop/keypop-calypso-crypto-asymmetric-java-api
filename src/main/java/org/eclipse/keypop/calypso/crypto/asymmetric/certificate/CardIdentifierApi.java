@@ -13,7 +13,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate;
  * The CardIdentifierApi interface provides functions to interact with the card's identifier by
  * allowing to get the Application Identifier (AID) and serial number of the card.
  *
- * @since 0.1.0
+ * @since 0.2.0
  */
 public interface CardIdentifierApi {
 
@@ -23,7 +23,7 @@ public interface CardIdentifierApi {
    *
    * @return a byte array containing the Application Identifier (AID) of the card. The length of the
    *     byte array is between 5 and 16 bytes.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   byte[] getAid();
 
@@ -31,7 +31,7 @@ public interface CardIdentifierApi {
    * Returns the serial number of the card. A byte array containing the serial number is returned.
    *
    * @return an 8-byte byte array containing the serial number of the card
-   * @since 0.1.0
+   * @since 0.2.0
    */
   byte[] getSerialNumber();
 }

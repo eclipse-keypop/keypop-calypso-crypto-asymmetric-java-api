@@ -12,7 +12,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 /**
  * This is the SPI interface for the card certificate factory.
  *
- * @since 0.1.0
+ * @since 0.2.0
  */
 public interface CardCertificateFactorySpi {
 
@@ -20,7 +20,7 @@ public interface CardCertificateFactorySpi {
    * Get certificate type.
    *
    * @return the type of the certificate as byte.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   byte getCertificateType();
 
@@ -29,7 +29,7 @@ public interface CardCertificateFactorySpi {
    *
    * @param cardOutputData the data used to create the certificate.
    * @return the created certificate instance.
-   * @since 0.1.0
+   * @since 0.2.0
    */
   CardCertificateSpi createCertificate(byte[] cardOutputData);
 }
