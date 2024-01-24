@@ -10,7 +10,7 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
 /**
- * SPI interface for the CA certificate factory.
+ * SPI interface dedicated to CA certificate creation.
  *
  * @since 0.2.0
  */

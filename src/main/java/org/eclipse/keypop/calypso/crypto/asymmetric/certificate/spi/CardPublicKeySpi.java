@@ -10,8 +10,8 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
 /**
- * Specifies the contract of card public keys. It provides a single method to fetch raw public key
- * values.
+ * Specifies the contract of card public keys. It provides a single method to fetch the raw public
+ * key value.
  *
  * @since 0.2.0
  */

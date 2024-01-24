@@ -10,7 +10,7 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
 /**
- * SPI for Certification Authority (CA) certificate management.
+ * SPI interface dedicated to Certification Authority (CA) certificate management.
  *
  * @since 0.2.0
  */

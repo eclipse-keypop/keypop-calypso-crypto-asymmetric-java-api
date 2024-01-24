@@ -10,7 +10,7 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
 /**
- * SPI for card certificate management.
+ * SPI interface dedicated to card certificate management.
  *
  * @since 0.2.0
  */
