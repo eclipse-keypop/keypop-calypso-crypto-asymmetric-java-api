@@ -1,6 +1,5 @@
 /**
- * APIs dedicated to PKI certificates management to be implemented by a Calypso asymmetric crypto
- * module.
+ * APIs dedicated to PKI certificates management to be used by a Calypso asymmetric crypto module.
  *
  * @since 0.2.0
  */

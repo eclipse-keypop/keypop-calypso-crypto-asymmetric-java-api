@@ -17,7 +17,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 public interface CaCertificateFactorySpi {
 
   /**
-   * Get certificate type.
+   * Returns the certificate type.
    *
    * @return the type of the certificate as byte.
    * @since 0.2.0
@@ -25,7 +25,7 @@ public interface CaCertificateFactorySpi {
   byte getCertificateType();
 
   /**
-   * Create a new CA certificate instance with the given card output data.
+   * Creates a new CA certificate instance with the given card output data.
    *
    * @param cardOutputData the data used to create the certificate.
    * @return the created certificate instance.
