@@ -7,22 +7,20 @@
  *
  * SPDX-License-Identifier: MIT
  ****************************************************************************** */
-package org.eclipse.keypop.calypso.crypto.asymmetric;
+package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
 /**
- * API properties.
+ * SPI providing the card's public key.
  *
  * @since 0.2.0
  */
-public final class AsymmetricCryptoApiProperties {
+public interface CardPublicKeySpi {
 
   /**
-   * API version: {@value}
+   * Get the raw value of the card's public key as a byte array.
    *
+   * @return A 64-byte byte array.
    * @since 0.2.0
    */
-  public static final String VERSION = "0.2";
-
-  /** Private constructor */
-  private AsymmetricCryptoApiProperties() {}
+  byte[] getRawValue();
 }
