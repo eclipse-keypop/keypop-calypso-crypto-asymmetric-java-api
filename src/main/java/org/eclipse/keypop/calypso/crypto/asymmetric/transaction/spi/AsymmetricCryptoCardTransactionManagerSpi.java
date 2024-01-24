@@ -50,5 +50,5 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    * @return True if the signature is valid, false otherwise.
    * @since 0.2.0
    */
-  boolean verifySession(byte[] cardSessionSignature);
+  boolean isSessionValid(byte[] cardSessionSignature);
 }
