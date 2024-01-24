@@ -18,9 +18,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate;
 public class InvalidCertificateException extends Exception {
 
   /**
-   * Constructs an InvalidCertificateException with the specified detail message.
-   *
-   * @param message the detail message.
+   * @param message Message to identify the exception context.
    * @since 0.2.0
    */
   public InvalidCertificateException(String message) {
@@ -28,12 +26,10 @@ public class InvalidCertificateException extends Exception {
   }
 
   /**
-   * Constructs a new exception with the specified detail message and cause.
+   * Encapsulates a lower level exception.
    *
-   * @param message the detail message (which is saved for later retrieval by the
-   *     Throwable.getMessage() method).
-   * @param cause the cause (which is saved for later retrieval by the Throwable.getCause() method).
-   *     (A null value is permitted, and indicates that the cause is nonexistent or unknown.)
+   * @param message Message to identify the exception context.
+   * @param cause The cause.
    * @since 0.2.0
    */
   public InvalidCertificateException(String message, Throwable cause) {
