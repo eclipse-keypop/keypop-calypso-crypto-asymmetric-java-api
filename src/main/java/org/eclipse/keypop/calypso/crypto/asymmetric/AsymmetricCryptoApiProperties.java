@@ -21,7 +21,7 @@ public final class AsymmetricCryptoApiProperties {
    *
    * @since 0.2.0
    */
-  public static final String VERSION = "0.1";
+  public static final String VERSION = "0.2";
 
   /** Private constructor */
   private AsymmetricCryptoApiProperties() {}
