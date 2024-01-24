@@ -31,7 +31,7 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    * @param cardPublicKey The card public key.
    * @since 0.2.0
    */
-  void initTerminalSessionSignature(CardPublicKeySpi cardPublicKey);
+  void initSession(CardPublicKeySpi cardPublicKey);
 
   /**
    * Updates the session signature computation with data sent or received from the card as a byte
@@ -40,15 +40,15 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    * @param cardApdu The APDU bytes exchanged with the card (ingoing or outgoing).
    * @since 0.2.0
    */
-  void updateTerminalSessionSignature(byte[] cardApdu);
+  void updateSession(byte[] cardApdu);
 
   /**
    * Verifies the provided secure session signature (a 64-byte byte array) from the previously
    * initialized and updated context.
    *
    * @param cardSessionSignature The card signature.
-   * @return True if the card session is correct, false otherwise.
+   * @return True if the signature is valid, false otherwise.
    * @since 0.2.0
    */
-  boolean isCardSessionSignatureValid(byte[] cardSessionSignature);
+  boolean verifySession(byte[] cardSessionSignature);
 }
