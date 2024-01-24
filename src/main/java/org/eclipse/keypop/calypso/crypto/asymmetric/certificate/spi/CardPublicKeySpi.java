@@ -20,7 +20,7 @@ public interface CardPublicKeySpi {
   /**
    * Get the raw value of the card's public key as a byte array.
    *
-   * @return byte array representing the raw public key
+   * @return A 64-byte byte array.
    * @since 0.2.0
    */
   byte[] getRawValue();

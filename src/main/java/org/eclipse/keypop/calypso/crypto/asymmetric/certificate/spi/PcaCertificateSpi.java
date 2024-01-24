@@ -9,8 +9,10 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
+import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.InvalidCertificateException;
+
 /**
- * SPI interface dedicated to Primary Certification Authority (PCA) certificate management.
+ * SPI dedicated to Primary Certification Authority (PCA) certificate management.
  *
  * @since 0.2.0
  */
@@ -19,8 +21,9 @@ public interface PcaCertificateSpi {
   /**
    * Extracts the public key from the PCA certificate.
    *
-   * @return PublicKeySpi the public key extracted from the PCA certificate.
+   * @return A non-null reference.
+   * @throws InvalidCertificateException If the certificate is invalid.
    * @since 0.2.0
    */
-  PublicKeySpi extractPublicKey();
+  PublicKeySpi extractPublicKey() throws InvalidCertificateException;
 }

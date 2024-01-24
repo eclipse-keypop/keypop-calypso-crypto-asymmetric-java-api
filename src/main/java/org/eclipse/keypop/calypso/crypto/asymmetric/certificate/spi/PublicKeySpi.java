@@ -21,7 +21,7 @@ public interface PublicKeySpi {
   /**
    * Retrieves the public key value.
    *
-   * @return The public key value.
+   * @return A non-null reference.
    * @since 0.2.0
    */
   PublicKey getValue();
@@ -29,7 +29,7 @@ public interface PublicKeySpi {
   /**
    * Retrieves the reference of the public key as a byte array.
    *
-   * @return The reference of the public key as a byte array.
+   * @return A non-empty byte array.
    * @since 0.2.0
    */
   byte[] getReference();

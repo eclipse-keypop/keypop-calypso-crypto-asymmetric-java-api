@@ -9,17 +9,19 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
+import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.InvalidCertificateException;
+
 /**
- * SPI interface dedicated to Certification Authority (CA) certificate management.
+ * SPI dedicated to Certification Authority (CA) certificate management.
  *
  * @since 0.2.0
  */
 public interface CaCertificateSpi {
 
   /**
-   * Retrieves the reference of the issuer's public key.
+   * Retrieves the reference of the issuer's public key as a byte array.
    *
-   * @return byte array containing the reference of the issuer's public key.
+   * @return A non-empty byte array.
    * @since 0.2.0
    */
   byte[] getIssuerPublicKeyReference();
@@ -27,9 +29,10 @@ public interface CaCertificateSpi {
   /**
    * Extracts the public key from the CA certificate using the issuer's public key.
    *
-   * @param issuerPublicKey Public key of the issuer.
-   * @return PublicKeySpi the public key extracted from the CA certificate.
+   * @param issuerPublicKey A non-null reference.
+   * @return A non-null reference.
+   * @throws InvalidCertificateException If the certificate is invalid.
    * @since 0.2.0
    */
-  PublicKeySpi extractPublicKey(PublicKeySpi issuerPublicKey);
+  PublicKeySpi extractPublicKey(PublicKeySpi issuerPublicKey) throws InvalidCertificateException;
 }

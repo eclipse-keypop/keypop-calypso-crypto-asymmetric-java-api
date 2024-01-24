@@ -19,7 +19,7 @@ public interface AsymmetricCryptoCardTransactionManagerFactorySpi {
   /**
    * Returns a new instance of {@link AsymmetricCryptoCardTransactionManagerSpi}.
    *
-   * @return A new instance of {@link AsymmetricCryptoCardTransactionManagerSpi}.
+   * @return A non-null reference.
    * @since 0.2.0
    */
   AsymmetricCryptoCardTransactionManagerSpi createCardTransactionManager();

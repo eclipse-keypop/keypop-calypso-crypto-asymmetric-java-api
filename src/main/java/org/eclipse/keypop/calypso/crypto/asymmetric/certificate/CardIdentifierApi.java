@@ -17,8 +17,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate;
 public interface CardIdentifierApi {
 
   /**
-   * Returns the Application Identifier (AID) of the card as byte array whose length is between 5
-   * and 16 bytes.
+   * Returns the card's application identifier (AID) as byte array between 5 and 16 bytes long.
    *
    * @return A non-empty byte array.
    * @since 0.2.0
@@ -26,7 +25,7 @@ public interface CardIdentifierApi {
   byte[] getAid();
 
   /**
-   * Returns the serial number of the card as.
+   * Returns the card's serial number as an 8-byte byte array.
    *
    * @return A non-empty byte array.
    * @since 0.2.0
