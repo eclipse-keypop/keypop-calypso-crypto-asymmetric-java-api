@@ -9,8 +9,6 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
-import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.InvalidCertificateException;
-
 /**
  * SPI dedicated to the creation of card certificates from raw data stored on a card.
  *
@@ -33,8 +31,8 @@ public interface CardCertificateFactorySpi {
    *
    * @param cardOutputData A non-empty byte array.
    * @return A non-null reference.
-   * @throws IllegalArgumentException If the argument is null or invalid.
+   * @throws IllegalArgumentException If the argument is null or has an invalid format.
    * @since 0.2.0
    */
-  CardCertificateSpi createCertificate(byte[] cardOutputData) throws InvalidCertificateException;
+  CardCertificateSpi createCertificate(byte[] cardOutputData);
 }
