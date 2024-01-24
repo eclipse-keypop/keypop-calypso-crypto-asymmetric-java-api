@@ -10,8 +10,8 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate;
 
 /**
- * This class represents an exception that is thrown when an invalid certificate is encountered
- * during the cryptographic operation.
+ * Exception that is thrown when an invalid certificate is encountered during the cryptographic
+ * operation.
  *
  * @see RuntimeException
  * @since 0.2.0
