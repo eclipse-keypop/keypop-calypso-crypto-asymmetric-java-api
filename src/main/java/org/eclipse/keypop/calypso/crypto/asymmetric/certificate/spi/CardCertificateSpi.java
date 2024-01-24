@@ -27,13 +27,12 @@ public interface CardCertificateSpi {
   byte[] getIssuerPublicKeyReference();
 
   /**
-   * Extracts the public key from the card certificate using the issuer's public key.
+   * Verifies the certificate signature and returns the public key.
    *
-   * @param issuerPublicKey A non-null reference.
+   * @param issuerPublicKey The issuer public key.
    * @return A non-null reference.
    * @throws InvalidCertificateException If the certificate is invalid.
    * @since 0.2.0
    */
-  CardPublicKeySpi extractPublicKey(PublicKeySpi issuerPublicKey)
-      throws InvalidCertificateException;
+  CardPublicKeySpi getPublicKey(PublicKeySpi issuerPublicKey) throws InvalidCertificateException;
 }
