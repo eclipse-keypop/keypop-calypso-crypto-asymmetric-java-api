@@ -9,6 +9,7 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
+import java.security.PublicKey;
 import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.InvalidCertificateException;
 
 /**
@@ -32,7 +33,8 @@ public interface CardCertificateSpi {
    * @param issuerPublicKey The issuer public key.
    * @return A non-null reference.
    * @throws InvalidCertificateException If the certificate is invalid.
+   * @see PublicKey
    * @since 0.2.0
    */
-  CardPublicKeySpi getPublicKey(PublicKeySpi issuerPublicKey) throws InvalidCertificateException;
+  CardPublicKeySpi getPublicKey(PublicKey issuerPublicKey) throws InvalidCertificateException;
 }

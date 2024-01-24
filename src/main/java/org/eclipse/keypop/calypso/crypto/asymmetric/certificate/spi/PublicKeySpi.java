@@ -12,7 +12,7 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 import java.security.PublicKey;
 
 /**
- * Represents an interface for a public key.
+ * SPI providing a generic public key.
  *
  * @since 0.2.0
  */
@@ -22,6 +22,7 @@ public interface PublicKeySpi {
    * Retrieves the public key value.
    *
    * @return A non-null reference.
+   * @see PublicKey
    * @since 0.2.0
    */
   PublicKey getValue();
