@@ -152,9 +152,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="PublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">PublicKeySpi</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPublicKey()">getPublicKey</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkCertificateAndGetPublicKey()">checkCertificateAndGetPublicKey</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Verifies the certificate signature and returns the public key.</div>
+<div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.</div>
 </td>
 </tr>
 </table>
@@ -174,22 +174,33 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="getPublicKey()">
+<a id="checkCertificateAndGetPublicKey()">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getPublicKey</h4>
-<pre class="methodSignature"><a href="PublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">PublicKeySpi</a>&nbsp;getPublicKey()
-                   throws <a href="../InvalidCertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">InvalidCertificateException</a></pre>
-<div class="block">Verifies the certificate signature and returns the public key.</div>
+<h4>checkCertificateAndGetPublicKey</h4>
+<pre class="methodSignature"><a href="PublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">PublicKeySpi</a>&nbsp;checkCertificateAndGetPublicKey()
+                                      throws <a href="../CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></pre>
+<div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.
+
+ <p>This method performs a comprehensive validation of the certificate, including but not
+ limited to checking the validity of the signature. It also verifies other essential fields of
+ the certificate, such as the validity period, the issuer and subject details, and any relevant
+ constraints or extensions. The method ensures the certificate is not only properly signed by
+ the issuer but also conforms to the expected standards and requirements.
+
+ <p>Note: The certificate is expected to be self-signed in this context.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>A non-null reference.</dd>
+<dd>A non-null reference to the verified public key of the certificate.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../InvalidCertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">InvalidCertificateException</a></code> - If the certificate is invalid.</dd>
+<dd><code><a href="../CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></code> - If the certificate is invalid, expired, revoked, or fails any
+     other validation checks.</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.2.0</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><code>PublicKey</code></dd>
 </dl>
 </li>
 </ul>

@@ -151,17 +151,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkCertificateAndGetPublicKey(java.security.PublicKey)">checkCertificateAndGetPublicKey</a></span>&#8203;(java.security.PublicKey&nbsp;issuerPublicKey)</code></th>
+<td class="colLast">
+<div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getIssuerPublicKeyReference()">getIssuerPublicKeyReference</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Retrieves the reference of the issuer's public key as a byte array.</div>
-</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPublicKey(java.security.PublicKey)">getPublicKey</a></span>&#8203;(java.security.PublicKey&nbsp;issuerPublicKey)</code></th>
-<td class="colLast">
-<div class="block">Verifies the certificate signature and returns the public key.</div>
 </td>
 </tr>
 </table>
@@ -197,22 +197,29 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="getPublicKey(java.security.PublicKey)">
+<a id="checkCertificateAndGetPublicKey(java.security.PublicKey)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getPublicKey</h4>
-<pre class="methodSignature"><a href="CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;getPublicKey&#8203;(java.security.PublicKey&nbsp;issuerPublicKey)
-                       throws <a href="../InvalidCertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">InvalidCertificateException</a></pre>
-<div class="block">Verifies the certificate signature and returns the public key.</div>
+<h4>checkCertificateAndGetPublicKey</h4>
+<pre class="methodSignature"><a href="CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;checkCertificateAndGetPublicKey&#8203;(java.security.PublicKey&nbsp;issuerPublicKey)
+                                          throws <a href="../CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></pre>
+<div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.
+
+ <p>This method performs a comprehensive validation of the certificate, including but not
+ limited to checking the validity of the signature. It also verifies other essential fields of
+ the certificate, such as the validity period, the issuer and subject details, and any relevant
+ constraints or extensions. The method ensures the certificate is not only properly signed by
+ the issuer but also conforms to the expected standards and requirements.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>issuerPublicKey</code> - The issuer public key.</dd>
+<dd><code>issuerPublicKey</code> - The issuer public key used for signature verification.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>A non-null reference.</dd>
+<dd>A non-null reference to the verified public key of the certificate.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../InvalidCertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">InvalidCertificateException</a></code> - If the certificate is invalid.</dd>
+<dd><code><a href="../CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></code> - If the certificate is invalid, expired, revoked, or fails any
+     other validation checks.</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.2.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>

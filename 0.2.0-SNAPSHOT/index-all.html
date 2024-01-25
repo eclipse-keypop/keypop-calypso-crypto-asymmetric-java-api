@@ -140,6 +140,29 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">SPI providing the card's public key.</div>
 </dd>
+<dt><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate"><span class="typeNameLink">CertificateException</span></a> - Exception in <a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/package-summary.html">org.eclipse.keypop.calypso.crypto.asymmetric.certificate</a></dt>
+<dd>
+<div class="block">Exception that is thrown when an invalid certificate is encountered during the cryptographic
+ operation.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/CertificateException.html#%3Cinit%3E(java.lang.String)">CertificateException(String)</a></span> - Constructor for exception org.eclipse.keypop.calypso.crypto.asymmetric.certificate.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/CertificateException.html#%3Cinit%3E(java.lang.String,java.lang.Throwable)">CertificateException(String, Throwable)</a></span> - Constructor for exception org.eclipse.keypop.calypso.crypto.asymmetric.certificate.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></dt>
+<dd>
+<div class="block">Encapsulates a lower level exception.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/PcaCertificateSpi.html#checkCertificateAndGetPublicKey()">checkCertificateAndGetPublicKey()</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/PcaCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">PcaCertificateSpi</a></dt>
+<dd>
+<div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateSpi.html#checkCertificateAndGetPublicKey(java.security.PublicKey)">checkCertificateAndGetPublicKey(PublicKey)</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateSpi</a></dt>
+<dd>
+<div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateSpi.html#checkCertificateAndGetPublicKey(java.security.PublicKey)">checkCertificateAndGetPublicKey(PublicKey)</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardCertificateSpi</a></dt>
+<dd>
+<div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerFactorySpi.html#createCardTransactionManager()">createCardTransactionManager()</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerFactorySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi">AsymmetricCryptoCardTransactionManagerFactorySpi</a></dt>
 <dd>
 <div class="block">Returns a new instance of <a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi"><code>AsymmetricCryptoCardTransactionManagerSpi</code></a>.</div>
@@ -178,18 +201,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Retrieves the reference of the issuer's public key as a byte array.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/PcaCertificateSpi.html#getPublicKey()">getPublicKey()</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/PcaCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">PcaCertificateSpi</a></dt>
-<dd>
-<div class="block">Verifies the certificate signature and returns the public key.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateSpi.html#getPublicKey(java.security.PublicKey)">getPublicKey(PublicKey)</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateSpi</a></dt>
-<dd>
-<div class="block">Verifies the certificate signature and returns the public key.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateSpi.html#getPublicKey(java.security.PublicKey)">getPublicKey(PublicKey)</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardCertificateSpi</a></dt>
-<dd>
-<div class="block">Verifies the certificate signature and returns the public key.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardPublicKeySpi.html#getRawValue()">getRawValue()</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a></dt>
 <dd>
 <div class="block">Get the raw value of the card's public key as a byte array.</div>
@@ -216,17 +227,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Initialize the cryptographic context for a new secure session in PKI mode with the provided
  card public key.</div>
-</dd>
-<dt><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/InvalidCertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate"><span class="typeNameLink">InvalidCertificateException</span></a> - Exception in <a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/package-summary.html">org.eclipse.keypop.calypso.crypto.asymmetric.certificate</a></dt>
-<dd>
-<div class="block">Exception that is thrown when an invalid certificate is encountered during the cryptographic
- operation.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/InvalidCertificateException.html#%3Cinit%3E(java.lang.String)">InvalidCertificateException(String)</a></span> - Constructor for exception org.eclipse.keypop.calypso.crypto.asymmetric.certificate.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/InvalidCertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">InvalidCertificateException</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/InvalidCertificateException.html#%3Cinit%3E(java.lang.String,java.lang.Throwable)">InvalidCertificateException(String, Throwable)</a></span> - Constructor for exception org.eclipse.keypop.calypso.crypto.asymmetric.certificate.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/InvalidCertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">InvalidCertificateException</a></dt>
-<dd>
-<div class="block">Encapsulates a lower level exception.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html#isSessionValid(byte%5B%5D)">isSessionValid(byte[])</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi">AsymmetricCryptoCardTransactionManagerSpi</a></dt>
 <dd>
