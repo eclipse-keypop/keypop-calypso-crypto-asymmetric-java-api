@@ -15,13 +15,13 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate;
  *
  * @since 0.2.0
  */
-public class InvalidCertificateException extends Exception {
+public class CertificateException extends Exception {
 
   /**
    * @param message Message to identify the exception context.
    * @since 0.2.0
    */
-  public InvalidCertificateException(String message) {
+  public CertificateException(String message) {
     super(message);
   }
 
@@ -32,7 +32,7 @@ public class InvalidCertificateException extends Exception {
    * @param cause The cause.
    * @since 0.2.0
    */
-  public InvalidCertificateException(String message, Throwable cause) {
+  public CertificateException(String message, Throwable cause) {
     super(message, cause);
   }
 }
