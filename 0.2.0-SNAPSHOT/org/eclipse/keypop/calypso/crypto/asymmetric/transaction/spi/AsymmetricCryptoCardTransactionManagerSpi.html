@@ -157,7 +157,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initSession(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKeySpi)">initSession</a></span>&#8203;(<a href="../../certificate/spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;cardPublicKey)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initTerminalPkiSession(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKeySpi)">initTerminalPkiSession</a></span>&#8203;(<a href="../../certificate/spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;cardPublicKey)</code></th>
 <td class="colLast">
 <div class="block">Initialize the cryptographic context for a new secure session in PKI mode with the provided
  card public key.</div>
@@ -165,7 +165,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSessionValid(byte%5B%5D)">isSessionValid</a></span>&#8203;(byte[]&nbsp;cardSessionSignature)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCardPkiSessionValid(byte%5B%5D)">isCardPkiSessionValid</a></span>&#8203;(byte[]&nbsp;cardSessionSignature)</code></th>
 <td class="colLast">
 <div class="block">Verifies the provided secure session signature (a 64-byte byte array) from the previously
  initialized and updated context.</div>
@@ -173,10 +173,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateSession(byte%5B%5D)">updateSession</a></span>&#8203;(byte[]&nbsp;cardApdu)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateTerminalPkiSession(byte%5B%5D)">updateTerminalPkiSession</a></span>&#8203;(byte[]&nbsp;cardApdu)</code></th>
 <td class="colLast">
-<div class="block">Updates the session signature computation with data sent or received from the card as a byte
- array.</div>
+<div class="block">Updates the session signature verification engine with data sent or received from the card as a
+ byte array.</div>
 </td>
 </tr>
 </table>
@@ -196,13 +196,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="initSession(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKeySpi)">
+<a id="initTerminalPkiSession(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKeySpi)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>initSession</h4>
-<pre class="methodSignature">void&nbsp;initSession&#8203;(<a href="../../certificate/spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;cardPublicKey)</pre>
+<h4>initTerminalPkiSession</h4>
+<pre class="methodSignature">void&nbsp;initTerminalPkiSession&#8203;(<a href="../../certificate/spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;cardPublicKey)</pre>
 <div class="block">Initialize the cryptographic context for a new secure session in PKI mode with the provided
  card public key.</div>
 <dl>
@@ -213,15 +213,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="updateSession(byte[])">
+<a id="updateTerminalPkiSession(byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>updateSession</h4>
-<pre class="methodSignature">void&nbsp;updateSession&#8203;(byte[]&nbsp;cardApdu)</pre>
-<div class="block">Updates the session signature computation with data sent or received from the card as a byte
- array.</div>
+<h4>updateTerminalPkiSession</h4>
+<pre class="methodSignature">void&nbsp;updateTerminalPkiSession&#8203;(byte[]&nbsp;cardApdu)</pre>
+<div class="block">Updates the session signature verification engine with data sent or received from the card as a
+ byte array.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cardApdu</code> - The APDU bytes exchanged with the card (ingoing or outgoing).</dd>
@@ -230,13 +230,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="isSessionValid(byte[])">
+<a id="isCardPkiSessionValid(byte[])">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>isSessionValid</h4>
-<pre class="methodSignature">boolean&nbsp;isSessionValid&#8203;(byte[]&nbsp;cardSessionSignature)</pre>
+<h4>isCardPkiSessionValid</h4>
+<pre class="methodSignature">boolean&nbsp;isCardPkiSessionValid&#8203;(byte[]&nbsp;cardSessionSignature)</pre>
 <div class="block">Verifies the provided secure session signature (a 64-byte byte array) from the previously
  initialized and updated context.</div>
 <dl>

@@ -116,7 +116,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">C</h2>
 <dl>
-<dt><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateFactorySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi"><span class="typeNameLink">CaCertificateFactorySpi</span></a> - Interface in <a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/package-summary.html">org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi</a></dt>
+<dt><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateParserSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi"><span class="typeNameLink">CaCertificateParserSpi</span></a> - Interface in <a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/package-summary.html">org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi</a></dt>
 <dd>
 <div class="block">SPI dedicated to the creation of CA certificates from raw data stored on a card.</div>
 </dd>
@@ -124,7 +124,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">SPI dedicated to Certification Authority (CA) certificate management.</div>
 </dd>
-<dt><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateFactorySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi"><span class="typeNameLink">CardCertificateFactorySpi</span></a> - Interface in <a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/package-summary.html">org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi</a></dt>
+<dt><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateParserSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi"><span class="typeNameLink">CardCertificateParserSpi</span></a> - Interface in <a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/package-summary.html">org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi</a></dt>
 <dd>
 <div class="block">SPI dedicated to the creation of card certificates from raw data stored on a card.</div>
 </dd>
@@ -167,14 +167,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Returns a new instance of <a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi"><code>AsymmetricCryptoCardTransactionManagerSpi</code></a>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateFactorySpi.html#createCertificate(byte%5B%5D)">createCertificate(byte[])</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateFactorySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateFactorySpi</a></dt>
-<dd>
-<div class="block">Creates a new CA certificate instance with the given card output data.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateFactorySpi.html#createCertificate(byte%5B%5D)">createCertificate(byte[])</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateFactorySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardCertificateFactorySpi</a></dt>
-<dd>
-<div class="block">Creates a new card certificate instance with the given card output data.</div>
-</dd>
 </dl>
 <a id="I:G">
 <!--   -->
@@ -185,11 +177,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Returns the card's application identifier (AID) as byte array between 5 and 16 bytes long.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateFactorySpi.html#getCertificateType()">getCertificateType()</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateFactorySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateFactorySpi</a></dt>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateParserSpi.html#getCertificateType()">getCertificateType()</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateParserSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateParserSpi</a></dt>
 <dd>
 <div class="block">Returns the certificate type.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateFactorySpi.html#getCertificateType()">getCertificateType()</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateFactorySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardCertificateFactorySpi</a></dt>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateParserSpi.html#getCertificateType()">getCertificateType()</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateParserSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardCertificateParserSpi</a></dt>
 <dd>
 <div class="block">Returns the certificate type.</div>
 </dd>
@@ -223,12 +215,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">I</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html#initSession(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKeySpi)">initSession(CardPublicKeySpi)</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi">AsymmetricCryptoCardTransactionManagerSpi</a></dt>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html#initTerminalPkiSession(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKeySpi)">initTerminalPkiSession(CardPublicKeySpi)</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi">AsymmetricCryptoCardTransactionManagerSpi</a></dt>
 <dd>
 <div class="block">Initialize the cryptographic context for a new secure session in PKI mode with the provided
  card public key.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html#isSessionValid(byte%5B%5D)">isSessionValid(byte[])</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi">AsymmetricCryptoCardTransactionManagerSpi</a></dt>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html#isCardPkiSessionValid(byte%5B%5D)">isCardPkiSessionValid(byte[])</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi">AsymmetricCryptoCardTransactionManagerSpi</a></dt>
 <dd>
 <div class="block">Verifies the provided secure session signature (a 64-byte byte array) from the previously
  initialized and updated context.</div>
@@ -262,6 +254,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">P</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateParserSpi.html#parseCertificate(byte%5B%5D)">parseCertificate(byte[])</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateParserSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateParserSpi</a></dt>
+<dd>
+<div class="block">Parses the given card output data and creates a new CA certificate instance.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateParserSpi.html#parseCertificate(byte%5B%5D)">parseCertificate(byte[])</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateParserSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardCertificateParserSpi</a></dt>
+<dd>
+<div class="block">Parses the given card output data and creates a new card certificate instance.</div>
+</dd>
 <dt><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/PcaCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi"><span class="typeNameLink">PcaCertificateSpi</span></a> - Interface in <a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/package-summary.html">org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi</a></dt>
 <dd>
 <div class="block">SPI dedicated to Primary Certification Authority (PCA) certificate management.</div>
@@ -276,10 +276,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">U</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html#updateSession(byte%5B%5D)">updateSession(byte[])</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi">AsymmetricCryptoCardTransactionManagerSpi</a></dt>
+<dt><span class="memberNameLink"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html#updateTerminalPkiSession(byte%5B%5D)">updateTerminalPkiSession(byte[])</a></span> - Method in interface org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi.<a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/spi/AsymmetricCryptoCardTransactionManagerSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi">AsymmetricCryptoCardTransactionManagerSpi</a></dt>
 <dd>
-<div class="block">Updates the session signature computation with data sent or received from the card as a byte
- array.</div>
+<div class="block">Updates the session signature verification engine with data sent or received from the card as a
+ byte array.</div>
 </dd>
 </dl>
 <a id="I:V">
