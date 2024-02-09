@@ -10,11 +10,11 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
 /**
- * SPI dedicated to the creation of card certificates from raw data stored on a card.
+ * SPI dedicated to the creation of CA certificates from raw data stored on a card.
  *
  * @since 0.2.0
  */
-public interface CardCertificateFactorySpi {
+public interface CaCertificateParserSpi {
 
   /**
    * Returns the certificate type.
@@ -25,14 +25,14 @@ public interface CardCertificateFactorySpi {
   byte getCertificateType();
 
   /**
-   * Creates a new card certificate instance with the given card output data.
+   * Parses the given card output data and creates a new CA certificate instance.
    *
    * <p>The first byte of the provided byte array is the certificate type.
    *
-   * @param cardOutputData A byte array containing the card certificate as stored on the card.
+   * @param cardOutputData A byte array containing the CA certificate as stored on the card.
    * @return A non-null reference.
    * @throws IllegalArgumentException If the argument is null or has an invalid format.
    * @since 0.2.0
    */
-  CardCertificateSpi createCertificate(byte[] cardOutputData);
+  CaCertificateSpi parseCertificate(byte[] cardOutputData);
 }
