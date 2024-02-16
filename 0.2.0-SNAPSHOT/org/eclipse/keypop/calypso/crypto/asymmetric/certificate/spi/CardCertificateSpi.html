@@ -152,7 +152,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkCertificateAndGetPublicKey(java.security.PublicKey)">checkCertificateAndGetPublicKey</a></span>&#8203;(java.security.PublicKey&nbsp;issuerPublicKey)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checkCertificateAndGetPublicKey(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CaCertificateContentSpi)">checkCertificateAndGetPublicKey</a></span>&#8203;(<a href="CaCertificateContentSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateContentSpi</a>&nbsp;issuerCertificateContent)</code></th>
 <td class="colLast">
 <div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.</div>
 </td>
@@ -197,13 +197,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="checkCertificateAndGetPublicKey(java.security.PublicKey)">
+<a id="checkCertificateAndGetPublicKey(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CaCertificateContentSpi)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>checkCertificateAndGetPublicKey</h4>
-<pre class="methodSignature"><a href="CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;checkCertificateAndGetPublicKey&#8203;(java.security.PublicKey&nbsp;issuerPublicKey)
+<pre class="methodSignature"><a href="CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;checkCertificateAndGetPublicKey&#8203;(<a href="CaCertificateContentSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateContentSpi</a>&nbsp;issuerCertificateContent)
                                           throws <a href="../CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></pre>
 <div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.
 
@@ -214,16 +214,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  the issuer but also conforms to the expected standards and requirements.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>issuerPublicKey</code> - The issuer public key used for signature verification.</dd>
+<dd><code>issuerCertificateContent</code> - The issuer certificate content to be used for signature
+     verification.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>A non-null reference to the verified public key of the certificate.</dd>
+<dd>A non-null reference.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></code> - If the certificate is invalid, expired, revoked, or fails any
      other validation checks.</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.2.0</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>PublicKey</code></dd>
 </dl>
 </li>
 </ul>

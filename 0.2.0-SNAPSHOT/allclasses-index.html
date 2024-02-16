@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":2,"i1":1,"i2":1,"i3":1,"i4":1,"i5":1,"i6":1,"i7":1,"i8":1,"i9":8,"i10":1,"i11":1};
+var data = {"i0":2,"i1":1,"i2":1,"i3":1,"i4":1,"i5":1,"i6":1,"i7":1,"i8":1,"i9":1,"i10":8,"i11":8,"i12":1};
 var tabs = {65535:["t0","All Classes"],1:["t1","Interface Summary"],2:["t2","Class Summary"],8:["t4","Exception Summary"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -130,58 +130,65 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </th>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateContentSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateContentSpi</a></td>
+<th class="colLast" scope="row">
+<div class="block">SPI providing a generic public key.</div>
+</th>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateParserSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateParserSpi</a></td>
 <th class="colLast" scope="row">
 <div class="block">SPI dedicated to the creation of CA certificates from raw data stored on a card.</div>
 </th>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CaCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateSpi</a></td>
 <th class="colLast" scope="row">
 <div class="block">SPI dedicated to Certification Authority (CA) certificate management.</div>
 </th>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateParserSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardCertificateParserSpi</a></td>
 <th class="colLast" scope="row">
 <div class="block">SPI dedicated to the creation of card certificates from raw data stored on a card.</div>
 </th>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardCertificateSpi</a></td>
 <th class="colLast" scope="row">
 <div class="block">SPI dedicated to card certificate management.</div>
 </th>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/CardIdentifierApi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CardIdentifierApi</a></td>
 <th class="colLast" scope="row">
 <div class="block">Provides card identification data such as application identifier (AID) and card serial number.</div>
 </th>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a></td>
 <th class="colLast" scope="row">
 <div class="block">SPI providing the card's public key.</div>
 </th>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></td>
 <th class="colLast" scope="row">
 <div class="block">Exception that is thrown when an invalid certificate is encountered during the cryptographic
  operation.</div>
 </th>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
+<td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/transaction/InvalidCardPublicKeyException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.transaction">InvalidCardPublicKeyException</a></td>
+<th class="colLast" scope="row">
+<div class="block">Exception that is thrown when the card public key is not compliant with the current elliptic
+ curve.</div>
+</th>
+</tr>
+<tr id="i12" class="altColor">
 <td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/PcaCertificateSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">PcaCertificateSpi</a></td>
 <th class="colLast" scope="row">
 <div class="block">SPI dedicated to Primary Certification Authority (PCA) certificate management.</div>
-</th>
-</tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><a href="org/eclipse/keypop/calypso/crypto/asymmetric/certificate/spi/PublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">PublicKeySpi</a></td>
-<th class="colLast" scope="row">
-<div class="block">SPI providing a generic public key.</div>
 </th>
 </tr>
 </table>

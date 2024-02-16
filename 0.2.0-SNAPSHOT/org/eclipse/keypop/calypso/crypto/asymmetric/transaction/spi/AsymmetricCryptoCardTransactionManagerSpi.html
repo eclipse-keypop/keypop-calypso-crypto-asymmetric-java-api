@@ -202,12 +202,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>initTerminalPkiSession</h4>
-<pre class="methodSignature">void&nbsp;initTerminalPkiSession&#8203;(<a href="../../certificate/spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;cardPublicKey)</pre>
+<pre class="methodSignature">void&nbsp;initTerminalPkiSession&#8203;(<a href="../../certificate/spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;cardPublicKey)
+                     throws <a href="../InvalidCardPublicKeyException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.transaction">InvalidCardPublicKeyException</a></pre>
 <div class="block">Initialize the cryptographic context for a new secure session in PKI mode with the provided
  card public key.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cardPublicKey</code> - The card public key.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../InvalidCardPublicKeyException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.transaction">InvalidCardPublicKeyException</a></code> - If the provided public key value is not compliant with
+     the current elliptic curve.</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.2.0</dd>
 </dl>
@@ -221,7 +225,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>updateTerminalPkiSession</h4>
 <pre class="methodSignature">void&nbsp;updateTerminalPkiSession&#8203;(byte[]&nbsp;cardApdu)</pre>
 <div class="block">Updates the session signature verification engine with data sent or received from the card as a
- byte array.</div>
+ byte array.
+
+ <p>In the case of ingoing data, the input length must be &gt;= 5.
+
+ <p>In the case of outgoing data, the input length must be &gt;= 2.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cardApdu</code> - The APDU bytes exchanged with the card (ingoing or outgoing).</dd>

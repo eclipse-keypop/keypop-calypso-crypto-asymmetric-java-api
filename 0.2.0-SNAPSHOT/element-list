@@ -1,4 +1,5 @@
 org.eclipse.keypop.calypso.crypto.asymmetric
 org.eclipse.keypop.calypso.crypto.asymmetric.certificate
 org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi
+org.eclipse.keypop.calypso.crypto.asymmetric.transaction
 org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi

@@ -132,22 +132,24 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../spi/PublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">PublicKeySpi</a></code></td>
-<th class="colSecond" scope="row"><span class="typeNameLabel">CaCertificateSpi.</span><code><span class="memberNameLink"><a href="../spi/CaCertificateSpi.html#checkCertificateAndGetPublicKey(java.security.PublicKey)">checkCertificateAndGetPublicKey</a></span>&#8203;(java.security.PublicKey&nbsp;issuerPublicKey)</code></th>
+<td class="colFirst"><code><a href="../spi/CaCertificateContentSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateContentSpi</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">CaCertificateSpi.</span><code><span class="memberNameLink"><a href="../spi/CaCertificateSpi.html#checkCertificateAndGetContent(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CaCertificateContentSpi)">checkCertificateAndGetContent</a></span>&#8203;(<a href="../spi/CaCertificateContentSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateContentSpi</a>&nbsp;issuerCertificateContent)</code></th>
 <td class="colLast">
-<div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.</div>
+<div class="block">Verifies the certificate signature and other relevant fields, then returns the certificate
+ content.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a></code></td>
-<th class="colSecond" scope="row"><span class="typeNameLabel">CardCertificateSpi.</span><code><span class="memberNameLink"><a href="../spi/CardCertificateSpi.html#checkCertificateAndGetPublicKey(java.security.PublicKey)">checkCertificateAndGetPublicKey</a></span>&#8203;(java.security.PublicKey&nbsp;issuerPublicKey)</code></th>
+<td class="colFirst"><code><a href="../spi/CaCertificateContentSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateContentSpi</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">PcaCertificateSpi.</span><code><span class="memberNameLink"><a href="../spi/PcaCertificateSpi.html#checkCertificateAndGetContent()">checkCertificateAndGetContent</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.</div>
+<div class="block">Verifies the certificate signature and other relevant fields, then returns the certificate
+ content.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../spi/PublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">PublicKeySpi</a></code></td>
-<th class="colSecond" scope="row"><span class="typeNameLabel">PcaCertificateSpi.</span><code><span class="memberNameLink"><a href="../spi/PcaCertificateSpi.html#checkCertificateAndGetPublicKey()">checkCertificateAndGetPublicKey</a></span>()</code></th>
+<td class="colFirst"><code><a href="../spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a></code></td>
+<th class="colSecond" scope="row"><span class="typeNameLabel">CardCertificateSpi.</span><code><span class="memberNameLink"><a href="../spi/CardCertificateSpi.html#checkCertificateAndGetPublicKey(org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CaCertificateContentSpi)">checkCertificateAndGetPublicKey</a></span>&#8203;(<a href="../spi/CaCertificateContentSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateContentSpi</a>&nbsp;issuerCertificateContent)</code></th>
 <td class="colLast">
 <div class="block">Verifies the certificate signature and other relevant fields, then returns the public key.</div>
 </td>
