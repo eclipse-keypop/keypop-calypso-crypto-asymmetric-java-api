@@ -10,6 +10,7 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi;
 
 import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKeySpi;
+import org.eclipse.keypop.calypso.crypto.asymmetric.transaction.InvalidCardPublicKeyException;
 
 /**
  * Calypso card asymmetric key cryptography service.
@@ -29,13 +30,19 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    * card public key.
    *
    * @param cardPublicKey The card public key.
+   * @throws InvalidCardPublicKeyException If the provided public key value is not compliant with
+   *     the current elliptic curve.
    * @since 0.2.0
    */
-  void initTerminalPkiSession(CardPublicKeySpi cardPublicKey);
+  void initTerminalPkiSession(CardPublicKeySpi cardPublicKey) throws InvalidCardPublicKeyException;
 
   /**
    * Updates the session signature verification engine with data sent or received from the card as a
    * byte array.
+   *
+   * <p>In the case of ingoing data, the input length must be &gt;= 5.
+   *
+   * <p>In the case of outgoing data, the input length must be &gt;= 2.
    *
    * @param cardApdu The APDU bytes exchanged with the card (ingoing or outgoing).
    * @since 0.2.0

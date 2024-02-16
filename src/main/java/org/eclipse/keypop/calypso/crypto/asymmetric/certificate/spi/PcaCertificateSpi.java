@@ -9,7 +9,6 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
-import java.security.PublicKey;
 import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateException;
 
 /**
@@ -20,7 +19,8 @@ import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateExcep
 public interface PcaCertificateSpi {
 
   /**
-   * Verifies the certificate signature and other relevant fields, then returns the public key.
+   * Verifies the certificate signature and other relevant fields, then returns the certificate
+   * content.
    *
    * <p>This method performs a comprehensive validation of the certificate, including but not
    * limited to checking the validity of the signature. It also verifies other essential fields of
@@ -30,11 +30,10 @@ public interface PcaCertificateSpi {
    *
    * <p>Note: The certificate is expected to be self-signed in this context.
    *
-   * @return A non-null reference to the verified public key of the certificate.
+   * @return A non-null reference.
    * @throws CertificateException If the certificate is invalid, expired, revoked, or fails any
    *     other validation checks.
-   * @see PublicKey
    * @since 0.2.0
    */
-  PublicKeySpi checkCertificateAndGetPublicKey() throws CertificateException;
+  CaCertificateContentSpi checkCertificateAndGetContent() throws CertificateException;
 }
