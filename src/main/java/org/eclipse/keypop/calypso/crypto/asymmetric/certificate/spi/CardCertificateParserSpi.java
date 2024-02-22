@@ -9,8 +9,6 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
-import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CardIdentifierApi;
-
 /**
  * SPI dedicated to the creation of card certificates from raw data stored on a card.
  *
@@ -31,11 +29,11 @@ public interface CardCertificateParserSpi {
    *
    * <p>The first byte of the provided byte array is the certificate type.
    *
-   * @param cardOutputData A byte array containing the card certificate as stored on the card.
-   * @param cardIdentifierApi The card identification (AID and serial number).
+   * @param cardOutputData A byte array containing the card certificate as stored on the card (316
+   *     bytes).
    * @return A non-null reference.
-   * @throws IllegalArgumentException If one of the arguments is null or has an invalid format.
+   * @throws IllegalArgumentException If the argument is null or has an invalid format.
    * @since 0.2.0
    */
-  CardCertificateSpi parseCertificate(byte[] cardOutputData, CardIdentifierApi cardIdentifierApi);
+  CardCertificateSpi parseCertificate(byte[] cardOutputData);
 }

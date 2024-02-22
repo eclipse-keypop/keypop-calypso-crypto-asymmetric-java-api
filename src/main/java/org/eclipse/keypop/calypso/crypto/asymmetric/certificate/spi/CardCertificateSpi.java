@@ -9,6 +9,7 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
+import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CardIdentifierApi;
 import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateException;
 
 /**
@@ -37,11 +38,14 @@ public interface CardCertificateSpi {
    *
    * @param issuerCertificateContent The issuer certificate content to be used for signature
    *     verification.
+   * @param cardIdentifierApi The card identification (AID and serial number).
    * @return A non-null reference.
+   * @throws IllegalArgumentException If one of the arguments is null or invalid.
    * @throws CertificateException If the certificate is invalid, expired, revoked, or fails any
    *     other validation checks.
    * @since 0.2.0
    */
-  CardPublicKeySpi checkCertificateAndGetPublicKey(CaCertificateContentSpi issuerCertificateContent)
+  CardPublicKeySpi checkCertificateAndGetPublicKey(
+      CaCertificateContentSpi issuerCertificateContent, CardIdentifierApi cardIdentifierApi)
       throws CertificateException;
 }

@@ -10,6 +10,7 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
 import java.security.PublicKey;
+import java.util.Date;
 
 /**
  * SPI providing a generic public key.
@@ -34,6 +35,22 @@ public interface CaCertificateContentSpi {
    * @since 0.2.0
    */
   byte[] getPublicKeyReference();
+
+  /**
+   * Returns the validity start date of the certificate.
+   *
+   * @return null if the validity start date is not defined.
+   * @since 0.2.0
+   */
+  Date getStartDate();
+
+  /**
+   * Returns the validity end date of the certificate.
+   *
+   * @return null if the validity end date is not defined.
+   * @since 0.2.0
+   */
+  Date getEndDate();
 
   /**
    * Indicates if the AID has to be checked.
