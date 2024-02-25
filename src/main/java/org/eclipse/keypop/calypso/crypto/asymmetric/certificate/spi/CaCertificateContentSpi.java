@@ -10,7 +10,6 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
 import java.security.PublicKey;
-import java.util.Date;
 
 /**
  * SPI providing a generic public key.
@@ -37,20 +36,30 @@ public interface CaCertificateContentSpi {
   byte[] getPublicKeyReference();
 
   /**
-   * Returns the validity start date of the certificate.
+   * Returns the validity start date of the certificate in long format.
    *
-   * @return null if the validity start date is not defined.
+   * <p>The date is represented in the format 0xYYYYMMDD, where YYYY is the four-digit year, MM is
+   * the two-digit month, and DD is the two-digit day.
+   *
+   * <p>If the validity start date is not defined or available, the method returns 0.
+   *
+   * @return 0 if the validity start date is not defined.
    * @since 0.2.0
    */
-  Date getStartDate();
+  long getStartDate();
 
   /**
-   * Returns the validity end date of the certificate.
+   * Returns the validity end date of the certificate in long format.
    *
-   * @return null if the validity end date is not defined.
+   * <p>The date is represented in the format 0xYYYYMMDD, where YYYY is the four-digit year, MM is
+   * the two-digit month, and DD is the two-digit day.
+   *
+   * <p>If the validity end date is not defined or available, the method returns 0.
+   *
+   * @return 0 if the validity end date is not defined.
    * @since 0.2.0
    */
-  Date getEndDate();
+  long getEndDate();
 
   /**
    * Indicates if the AID has to be checked.
