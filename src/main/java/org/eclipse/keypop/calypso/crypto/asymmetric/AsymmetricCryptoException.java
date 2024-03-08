@@ -7,21 +7,20 @@
  *
  * SPDX-License-Identifier: MIT
  ****************************************************************************** */
-package org.eclipse.keypop.calypso.crypto.asymmetric.certificate;
+package org.eclipse.keypop.calypso.crypto.asymmetric;
 
 /**
- * Exception that is thrown when an invalid certificate is encountered during the cryptographic
- * operation.
+ * Indicates that an error occurred when processing a asymmetric cryptographic operation.
  *
  * @since 0.2.0
  */
-public class CertificateException extends Exception {
+public class AsymmetricCryptoException extends Exception {
 
   /**
    * @param message Message to identify the exception context.
    * @since 0.2.0
    */
-  public CertificateException(String message) {
+  public AsymmetricCryptoException(String message) {
     super(message);
   }
 
@@ -32,7 +31,7 @@ public class CertificateException extends Exception {
    * @param cause The cause.
    * @since 0.2.0
    */
-  public CertificateException(String message, Throwable cause) {
+  public AsymmetricCryptoException(String message, Throwable cause) {
     super(message, cause);
   }
 }

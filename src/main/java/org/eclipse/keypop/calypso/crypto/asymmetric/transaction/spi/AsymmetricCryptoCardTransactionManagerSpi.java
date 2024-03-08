@@ -9,8 +9,8 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi;
 
+import org.eclipse.keypop.calypso.crypto.asymmetric.AsymmetricCryptoException;
 import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKeySpi;
-import org.eclipse.keypop.calypso.crypto.asymmetric.transaction.InvalidCardPublicKeyException;
 
 /**
  * Calypso card asymmetric key cryptography service.
@@ -30,11 +30,11 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    * card public key.
    *
    * @param cardPublicKey The card public key.
-   * @throws InvalidCardPublicKeyException If the provided public key value is not compliant with
-   *     the current elliptic curve.
+   * @throws AsymmetricCryptoException If the provided public key value is not compliant with the
+   *     current elliptic curve or if an error occurs during the initialization.
    * @since 0.2.0
    */
-  void initTerminalPkiSession(CardPublicKeySpi cardPublicKey) throws InvalidCardPublicKeyException;
+  void initTerminalPkiSession(CardPublicKeySpi cardPublicKey) throws AsymmetricCryptoException;
 
   /**
    * Updates the session signature verification engine with data sent or received from the card as a
@@ -45,9 +45,10 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    * <p>In the case of outgoing data, the input length must be &gt;= 2.
    *
    * @param cardApdu The APDU bytes exchanged with the card (ingoing or outgoing).
+   * @throws AsymmetricCryptoException If an error occurs while updating the session.
    * @since 0.2.0
    */
-  void updateTerminalPkiSession(byte[] cardApdu);
+  void updateTerminalPkiSession(byte[] cardApdu) throws AsymmetricCryptoException;
 
   /**
    * Verifies the provided secure session signature (a 64-byte byte array) from the previously
@@ -55,7 +56,8 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    *
    * @param cardSessionSignature The card signature.
    * @return True if the signature is valid, false otherwise.
+   * @throws AsymmetricCryptoException If an error occurs while verifying the signature.
    * @since 0.2.0
    */
-  boolean isCardPkiSessionValid(byte[] cardSessionSignature);
+  boolean isCardPkiSessionValid(byte[] cardSessionSignature) throws AsymmetricCryptoException;
 }

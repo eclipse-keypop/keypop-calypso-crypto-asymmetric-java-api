@@ -9,7 +9,8 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
-import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateException;
+import org.eclipse.keypop.calypso.crypto.asymmetric.AsymmetricCryptoException;
+import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateValidationException;
 
 /**
  * SPI dedicated to Certification Authority (CA) certificate management.
@@ -39,10 +40,13 @@ public interface CaCertificateSpi {
    * @param issuerCertificateContent The issuer certificate content to be used for signature
    *     verification.
    * @return A non-null reference.
-   * @throws CertificateException If the certificate is invalid, expired, revoked, or fails any
-   *     other validation checks.
+   * @throws CertificateValidationException If the certificate is invalid, expired, revoked, or
+   *     fails any other validation checks.
+   * @throws AsymmetricCryptoException If a technical error occurs during the cryptographic
+   *     computations.
    * @since 0.2.0
    */
   CaCertificateContentSpi checkCertificateAndGetContent(
-      CaCertificateContentSpi issuerCertificateContent) throws CertificateException;
+      CaCertificateContentSpi issuerCertificateContent)
+      throws CertificateValidationException, AsymmetricCryptoException;
 }

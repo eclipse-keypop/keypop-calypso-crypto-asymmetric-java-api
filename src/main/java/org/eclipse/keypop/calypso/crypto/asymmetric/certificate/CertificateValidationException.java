@@ -7,21 +7,23 @@
  *
  * SPDX-License-Identifier: MIT
  ****************************************************************************** */
-package org.eclipse.keypop.calypso.crypto.asymmetric.transaction;
+package org.eclipse.keypop.calypso.crypto.asymmetric.certificate;
 
 /**
- * Exception that is thrown when the card public key is not compliant with the current elliptic
- * curve.
+ * Indicates an issue encountered during the certificate validation.
+ *
+ * <p>This exception can be triggered by various issues such as an invalid signature or incorrect
+ * metadata values within the certificate.
  *
  * @since 0.2.0
  */
-public class InvalidCardPublicKeyException extends Exception {
+public class CertificateValidationException extends Exception {
 
   /**
    * @param message Message to identify the exception context.
    * @since 0.2.0
    */
-  public InvalidCardPublicKeyException(String message) {
+  public CertificateValidationException(String message) {
     super(message);
   }
 
@@ -32,7 +34,7 @@ public class InvalidCardPublicKeyException extends Exception {
    * @param cause The cause.
    * @since 0.2.0
    */
-  public InvalidCardPublicKeyException(String message, Throwable cause) {
+  public CertificateValidationException(String message, Throwable cause) {
     super(message, cause);
   }
 }
