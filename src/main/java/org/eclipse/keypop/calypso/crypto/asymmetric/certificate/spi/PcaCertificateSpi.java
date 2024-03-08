@@ -9,7 +9,8 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
-import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateException;
+import org.eclipse.keypop.calypso.crypto.asymmetric.AsymmetricCryptoException;
+import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateValidationException;
 
 /**
  * SPI dedicated to Primary Certification Authority (PCA) certificate management.
@@ -31,9 +32,12 @@ public interface PcaCertificateSpi {
    * <p>Note: The certificate is expected to be self-signed in this context.
    *
    * @return A non-null reference.
-   * @throws CertificateException If the certificate is invalid, expired, revoked, or fails any
-   *     other validation checks.
+   * @throws CertificateValidationException If the certificate is invalid, expired, revoked, or
+   *     fails any other validation checks.
+   * @throws AsymmetricCryptoException If a technical error occurs during the cryptographic
+   *     computations.
    * @since 0.2.0
    */
-  CaCertificateContentSpi checkCertificateAndGetContent() throws CertificateException;
+  CaCertificateContentSpi checkCertificateAndGetContent()
+      throws CertificateValidationException, AsymmetricCryptoException;
 }

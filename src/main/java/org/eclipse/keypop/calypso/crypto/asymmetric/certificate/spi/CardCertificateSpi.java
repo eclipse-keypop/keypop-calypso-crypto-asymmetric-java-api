@@ -9,8 +9,8 @@
  ****************************************************************************** */
 package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 
-import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CardIdentifierApi;
-import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateException;
+import org.eclipse.keypop.calypso.crypto.asymmetric.AsymmetricCryptoException;
+import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateValidationException;
 
 /**
  * SPI dedicated to card certificate management.
@@ -28,6 +28,23 @@ public interface CardCertificateSpi {
   byte[] getIssuerPublicKeyReference();
 
   /**
+   * Retrieves the AID of the autonomous application of the card as a byte array ranging from 5 to
+   * 16 bytes.
+   *
+   * @return A non-empty byte array.
+   * @since 0.2.0
+   */
+  byte[] getCardAid();
+
+  /**
+   * Retrieves the serial number of the card as 8-byte byte array.
+   *
+   * @return A non-empty byte array.
+   * @since 0.2.0
+   */
+  byte[] getCardSerialNumber();
+
+  /**
    * Verifies the certificate signature and other relevant fields, then returns the public key.
    *
    * <p>This method performs a comprehensive validation of the certificate, including but not
@@ -38,14 +55,14 @@ public interface CardCertificateSpi {
    *
    * @param issuerCertificateContent The issuer certificate content to be used for signature
    *     verification.
-   * @param cardIdentifierApi The card identification (AID and serial number).
    * @return A non-null reference.
    * @throws IllegalArgumentException If one of the arguments is null or invalid.
-   * @throws CertificateException If the certificate is invalid, expired, revoked, or fails any
-   *     other validation checks.
+   * @throws CertificateValidationException If the certificate is invalid, expired, revoked, or
+   *     fails any other validation checks.
+   * @throws AsymmetricCryptoException If a technical error occurs during the cryptographic
+   *     computations.
    * @since 0.2.0
    */
-  CardPublicKeySpi checkCertificateAndGetPublicKey(
-      CaCertificateContentSpi issuerCertificateContent, CardIdentifierApi cardIdentifierApi)
-      throws CertificateException;
+  CardPublicKeySpi checkCertificateAndGetPublicKey(CaCertificateContentSpi issuerCertificateContent)
+      throws CertificateValidationException, AsymmetricCryptoException;
 }
