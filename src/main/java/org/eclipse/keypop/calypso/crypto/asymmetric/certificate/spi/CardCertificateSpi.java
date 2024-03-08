@@ -56,7 +56,6 @@ public interface CardCertificateSpi {
    * @param issuerCertificateContent The issuer certificate content to be used for signature
    *     verification.
    * @return A non-null reference.
-   * @throws IllegalArgumentException If one of the arguments is null or invalid.
    * @throws CertificateValidationException If the certificate is invalid, expired, revoked, or
    *     fails any other validation checks.
    * @throws AsymmetricCryptoException If a technical error occurs during the cryptographic
