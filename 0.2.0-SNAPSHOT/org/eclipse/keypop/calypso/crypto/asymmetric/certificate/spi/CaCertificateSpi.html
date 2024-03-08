@@ -205,7 +205,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>checkCertificateAndGetContent</h4>
 <pre class="methodSignature"><a href="CaCertificateContentSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateContentSpi</a>&nbsp;checkCertificateAndGetContent&#8203;(<a href="CaCertificateContentSpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CaCertificateContentSpi</a>&nbsp;issuerCertificateContent)
-                                               throws <a href="../CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></pre>
+                                               throws <a href="../CertificateValidationException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateValidationException</a>,
+                                                      <a href="../../AsymmetricCryptoException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric">AsymmetricCryptoException</a></pre>
 <div class="block">Verifies the certificate signature and other relevant fields, then returns the certificate
  content.
 
@@ -221,8 +222,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A non-null reference.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../CertificateException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateException</a></code> - If the certificate is invalid, expired, revoked, or fails any
-     other validation checks.</dd>
+<dd><code><a href="../CertificateValidationException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.certificate">CertificateValidationException</a></code> - If the certificate is invalid, expired, revoked, or
+     fails any other validation checks.</dd>
+<dd><code><a href="../../AsymmetricCryptoException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric">AsymmetricCryptoException</a></code> - If a technical error occurs during the cryptographic
+     computations.</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.2.0</dd>
 </dl>

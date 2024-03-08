@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6};
+var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -158,41 +158,55 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEndDate()">getEndDate</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the validity end date of the certificate in long format.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.security.PublicKey</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPublicKey()">getPublicKey</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the public key.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPublicKeyReference()">getPublicKeyReference</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the reference of the public key as a byte array.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>long</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStartDate()">getStartDate</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the validity start date of the certificate in long format.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAidCheckRequested()">isAidCheckRequested</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Indicates if the AID has to be checked.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAidTruncated()">isAidTruncated</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Indicates if the AID is truncated.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCaCertificatesAuthenticationAllowed()">isCaCertificatesAuthenticationAllowed</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Indicates if the certificate can be used to authenticate CA certificates.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCardCertificatesAuthenticationAllowed()">isCardCertificatesAuthenticationAllowed</a></span>()</code></th>
 <td class="colLast">
@@ -245,6 +259,48 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A non-empty byte array.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>0.2.0</dd>
+</dl>
+</li>
+</ul>
+<a id="getStartDate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStartDate</h4>
+<pre class="methodSignature">long&nbsp;getStartDate()</pre>
+<div class="block">Returns the validity start date of the certificate in long format.
+
+ <p>The date is represented in the format 0xYYYYMMDD, where YYYY is the four-digit year, MM is
+ the two-digit month, and DD is the two-digit day.
+
+ <p>If the validity start date is not defined or available, the method returns 0.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>0 if the validity start date is not defined.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>0.2.0</dd>
+</dl>
+</li>
+</ul>
+<a id="getEndDate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEndDate</h4>
+<pre class="methodSignature">long&nbsp;getEndDate()</pre>
+<div class="block">Returns the validity end date of the certificate in long format.
+
+ <p>The date is represented in the format 0xYYYYMMDD, where YYYY is the four-digit year, MM is
+ the two-digit month, and DD is the two-digit day.
+
+ <p>If the validity end date is not defined or available, the method returns 0.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>0 if the validity end date is not defined.</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.2.0</dd>
 </dl>

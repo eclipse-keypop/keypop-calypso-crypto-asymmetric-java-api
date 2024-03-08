@@ -203,15 +203,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>initTerminalPkiSession</h4>
 <pre class="methodSignature">void&nbsp;initTerminalPkiSession&#8203;(<a href="../../certificate/spi/CardPublicKeySpi.html" title="interface in org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi">CardPublicKeySpi</a>&nbsp;cardPublicKey)
-                     throws <a href="../InvalidCardPublicKeyException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.transaction">InvalidCardPublicKeyException</a></pre>
+                     throws <a href="../../AsymmetricCryptoException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric">AsymmetricCryptoException</a></pre>
 <div class="block">Initialize the cryptographic context for a new secure session in PKI mode with the provided
  card public key.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cardPublicKey</code> - The card public key.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../InvalidCardPublicKeyException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric.transaction">InvalidCardPublicKeyException</a></code> - If the provided public key value is not compliant with
-     the current elliptic curve.</dd>
+<dd><code><a href="../../AsymmetricCryptoException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric">AsymmetricCryptoException</a></code> - If the provided public key value is not compliant with the
+     current elliptic curve or if an error occurs during the initialization.</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.2.0</dd>
 </dl>
@@ -223,7 +223,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>updateTerminalPkiSession</h4>
-<pre class="methodSignature">void&nbsp;updateTerminalPkiSession&#8203;(byte[]&nbsp;cardApdu)</pre>
+<pre class="methodSignature">void&nbsp;updateTerminalPkiSession&#8203;(byte[]&nbsp;cardApdu)
+                       throws <a href="../../AsymmetricCryptoException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric">AsymmetricCryptoException</a></pre>
 <div class="block">Updates the session signature verification engine with data sent or received from the card as a
  byte array.
 
@@ -233,6 +234,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cardApdu</code> - The APDU bytes exchanged with the card (ingoing or outgoing).</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../AsymmetricCryptoException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric">AsymmetricCryptoException</a></code> - If an error occurs while updating the session.</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.2.0</dd>
 </dl>
@@ -244,7 +247,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockListLast">
 <li class="blockList">
 <h4>isCardPkiSessionValid</h4>
-<pre class="methodSignature">boolean&nbsp;isCardPkiSessionValid&#8203;(byte[]&nbsp;cardSessionSignature)</pre>
+<pre class="methodSignature">boolean&nbsp;isCardPkiSessionValid&#8203;(byte[]&nbsp;cardSessionSignature)
+                       throws <a href="../../AsymmetricCryptoException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric">AsymmetricCryptoException</a></pre>
 <div class="block">Verifies the provided secure session signature (a 64-byte byte array) from the previously
  initialized and updated context.</div>
 <dl>
@@ -252,6 +256,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code>cardSessionSignature</code> - The card signature.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>True if the signature is valid, false otherwise.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../AsymmetricCryptoException.html" title="class in org.eclipse.keypop.calypso.crypto.asymmetric">AsymmetricCryptoException</a></code> - If an error occurs while verifying the signature.</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.2.0</dd>
 </dl>
