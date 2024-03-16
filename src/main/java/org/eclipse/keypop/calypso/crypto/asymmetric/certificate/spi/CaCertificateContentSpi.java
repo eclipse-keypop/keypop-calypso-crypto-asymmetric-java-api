@@ -36,6 +36,23 @@ public interface CaCertificateContentSpi {
   byte[] getPublicKeyReference();
 
   /**
+   * Returns the scope in which the Certificate Authority (CA) key pair usage is allowed.
+   *
+   * <p>The scope is represented by a two-digit hexadecimal value with the following meanings:
+   *
+   * <ul>
+   *   <li>00h: Scope restrictions not specified (production certificate).
+   *   <li>01h: Allowed only for development, tests, pilots, etc (test certificate).
+   *   <li>FFh: No scope restriction.
+   *   <li>Other values: Reserved for future use (RFU).
+   * </ul>
+   *
+   * @return A byte representing the scope.
+   * @since 0.2.0
+   */
+  byte getScope();
+
+  /**
    * Returns the validity start date of the certificate in long format.
    *
    * <p>The date is represented in the format 0xYYYYMMDD, where YYYY is the four-digit year, MM is
