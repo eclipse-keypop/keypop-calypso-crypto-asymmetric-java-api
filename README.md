@@ -9,11 +9,11 @@ to implement a card transaction secured by an asymmetrical key cryptography modu
 ## Documentation & Contribution Guide
 
 The full documentation, including the **user guide**, **download information** and **contribution guide**, is available
-on the Keypop website [keypop.org](https://eclipse-keypop.github.io/keypop-website/).
+on the Keypop website [keypop.org](https://keypop.org/).
 
 ## API documentation
 
-API Javadoc is available [here](https://eclipse-keypop.github.io/keypop-calypso-crypto-asymmetric-java-api).
+API Javadoc is available [here](https://docs.keypop.org/keypop-calypso-crypto-asymmetric-java-api).
 
 API documentation and class diagram is available
 [here](https://terminal-api.calypsonet.org/apis/calypsonet-terminal-calypso-crypto-asymmetric-api/).
