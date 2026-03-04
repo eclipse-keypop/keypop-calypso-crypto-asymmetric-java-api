@@ -16,7 +16,7 @@ on the Keypop website [keypop.org](https://keypop.org/).
 API Javadoc is available [here](https://docs.keypop.org/keypop-calypso-crypto-asymmetric-java-api).
 
 API documentation and class diagram is available
-[here](https://calypso-crypto-asymmetric-uml.terminal-api.calypsonet.org/).
+[here](https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/).
 
 ## About the source code
 
