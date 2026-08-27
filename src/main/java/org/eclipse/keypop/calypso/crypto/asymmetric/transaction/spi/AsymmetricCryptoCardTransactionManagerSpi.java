@@ -35,6 +35,10 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    * Initialize the cryptographic context for a new secure session in PKI mode with the provided
    * card public key.
    *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_AsymmetricCryptoCardTransactionManagerSpi_initTerminalPkiSession">AsymmetricCryptoCardTransactionManagerSpi.initTerminalPkiSession</a>
+   * for the normative contract.
+   *
    * @param cardPublicKey The card public key.
    * @throws AsymmetricCryptoException If the provided public key value is not compliant with the
    *     current elliptic curve or if an error occurs during the initialization.
@@ -50,6 +54,10 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
    *
    * <p>In the case of outgoing data, the input length must be &gt;= 2.
    *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_AsymmetricCryptoCardTransactionManagerSpi_updateTerminalPkiSession">AsymmetricCryptoCardTransactionManagerSpi.updateTerminalPkiSession</a>
+   * for the normative contract.
+   *
    * @param cardApdu The APDU bytes exchanged with the card (ingoing or outgoing).
    * @throws AsymmetricCryptoException If an error occurs while updating the session.
    * @since 0.2.0
@@ -59,6 +67,10 @@ public interface AsymmetricCryptoCardTransactionManagerSpi {
   /**
    * Verifies the provided secure session signature (a 64-byte byte array) from the previously
    * initialized and updated context.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_AsymmetricCryptoCardTransactionManagerSpi_isCardPkiSessionValid">AsymmetricCryptoCardTransactionManagerSpi.isCardPkiSessionValid</a>
+   * for the normative contract.
    *
    * @param cardSessionSignature The card signature.
    * @return True if the signature is valid, false otherwise.

@@ -25,6 +25,10 @@ public interface CardPublicKeySpi {
   /**
    * Get the raw value of the card's public key as a byte array.
    *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_CardPublicKeySpi_getRawValue">CardPublicKeySpi.getRawValue</a>
+   * for the normative contract.
+   *
    * @return A 64-byte byte array.
    * @since 0.2.0
    */
