@@ -14,6 +14,10 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi;
 /**
  * SPI providing the card's public key.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_CardPublicKeySpi">CardPublicKeySpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface CardPublicKeySpi {

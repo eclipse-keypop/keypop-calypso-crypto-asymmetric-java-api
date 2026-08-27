@@ -16,6 +16,10 @@ import java.security.PublicKey;
 /**
  * SPI providing a generic public key.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_CaCertificateContentSpi">CaCertificateContentSpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface CaCertificateContentSpi {

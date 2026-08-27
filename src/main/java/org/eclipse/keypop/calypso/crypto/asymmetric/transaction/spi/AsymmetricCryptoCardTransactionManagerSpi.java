@@ -23,6 +23,10 @@ import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.spi.CardPublicKe
  * <p>An instance of this interface can be obtained via the method {@link
  * AsymmetricCryptoCardTransactionManagerFactorySpi#createCardTransactionManager()}.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_AsymmetricCryptoCardTransactionManagerSpi">AsymmetricCryptoCardTransactionManagerSpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface AsymmetricCryptoCardTransactionManagerSpi {

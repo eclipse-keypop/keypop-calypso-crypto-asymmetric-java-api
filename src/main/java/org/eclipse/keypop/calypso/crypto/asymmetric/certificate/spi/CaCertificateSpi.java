@@ -17,6 +17,10 @@ import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateValid
 /**
  * SPI dedicated to Certification Authority (CA) certificate management.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_CaCertificateSpi">CaCertificateSpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface CaCertificateSpi {

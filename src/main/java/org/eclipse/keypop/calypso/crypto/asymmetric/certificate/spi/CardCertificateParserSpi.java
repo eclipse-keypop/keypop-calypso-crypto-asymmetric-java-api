@@ -16,6 +16,10 @@ import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateValid
 /**
  * SPI dedicated to the creation of card certificates from raw data stored on a card.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_CardCertificateParserSpi">CardCertificateParserSpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface CardCertificateParserSpi {

@@ -17,6 +17,10 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.certificate;
  * <p>This exception can be triggered by various issues such as an invalid signature or incorrect
  * metadata values within the certificate.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_CertificateValidationException">CertificateValidationException</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public class CertificateValidationException extends Exception {
