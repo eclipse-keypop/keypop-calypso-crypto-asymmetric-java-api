@@ -16,12 +16,20 @@ import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateValid
 /**
  * SPI dedicated to the creation of card certificates from raw data stored on a card.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_CardCertificateParserSpi">CardCertificateParserSpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface CardCertificateParserSpi {
 
   /**
    * Returns the certificate type.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_CardCertificateParserSpi_getCertificateType">CardCertificateParserSpi.getCertificateType</a>
+   * for the normative contract.
    *
    * @return A byte.
    * @since 0.2.0
@@ -32,6 +40,10 @@ public interface CardCertificateParserSpi {
    * Parses the given card output data and creates a new card certificate instance.
    *
    * <p>The first byte of the provided byte array is the certificate type.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_CardCertificateParserSpi_parseCertificate">CardCertificateParserSpi.parseCertificate</a>
+   * for the normative contract.
    *
    * @param cardOutputData A byte array containing the card certificate as stored on the card (316
    *     bytes).
