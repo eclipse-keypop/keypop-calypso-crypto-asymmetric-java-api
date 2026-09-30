@@ -17,12 +17,20 @@ import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateValid
 /**
  * SPI dedicated to Certification Authority (CA) certificate management.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_CaCertificateSpi">CaCertificateSpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface CaCertificateSpi {
 
   /**
    * Retrieves the reference of the issuer's public key as a byte array.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_CaCertificateSpi_getIssuerPublicKeyReference">CaCertificateSpi.getIssuerPublicKeyReference</a>
+   * for the normative contract.
    *
    * @return A non-empty byte array.
    * @since 0.2.0
@@ -38,6 +46,10 @@ public interface CaCertificateSpi {
    * the certificate, such as the validity period, the issuer and subject details, and any relevant
    * constraints or extensions. The method ensures the certificate is not only properly signed by
    * the issuer but also conforms to the expected standards and requirements.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_CaCertificateSpi_checkCertificateAndGetContent">CaCertificateSpi.checkCertificateAndGetContent</a>
+   * for the normative contract.
    *
    * @param issuerCertificateContent The issuer certificate content to be used for signature
    *     verification.

@@ -17,12 +17,20 @@ import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateValid
 /**
  * SPI dedicated to card certificate management.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_CardCertificateSpi">CardCertificateSpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface CardCertificateSpi {
 
   /**
    * Retrieves the reference of the issuer's public key as a byte array.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_CardCertificateSpi_getIssuerPublicKeyReference">CardCertificateSpi.getIssuerPublicKeyReference</a>
+   * for the normative contract.
    *
    * @return A non-empty byte array.
    * @since 0.2.0
@@ -33,6 +41,10 @@ public interface CardCertificateSpi {
    * Retrieves the AID of the autonomous application of the card as a byte array ranging from 5 to
    * 16 bytes.
    *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_CardCertificateSpi_getCardAid">CardCertificateSpi.getCardAid</a>
+   * for the normative contract.
+   *
    * @return A non-empty byte array.
    * @since 0.2.0
    */
@@ -40,6 +52,10 @@ public interface CardCertificateSpi {
 
   /**
    * Retrieves the serial number of the card as 8-byte byte array.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_CardCertificateSpi_getCardSerialNumber">CardCertificateSpi.getCardSerialNumber</a>
+   * for the normative contract.
    *
    * @return A non-empty byte array.
    * @since 0.2.0
@@ -54,6 +70,10 @@ public interface CardCertificateSpi {
    * the certificate, such as the validity period, the issuer and subject details, and any relevant
    * constraints or extensions. The method ensures the certificate is not only properly signed by
    * the issuer but also conforms to the expected standards and requirements.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_CardCertificateSpi_checkCertificateAndGetPublicKey">CardCertificateSpi.checkCertificateAndGetPublicKey</a>
+   * for the normative contract.
    *
    * @param issuerCertificateContent The issuer certificate content to be used for signature
    *     verification.

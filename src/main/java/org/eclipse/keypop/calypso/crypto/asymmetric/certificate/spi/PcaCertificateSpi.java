@@ -17,6 +17,10 @@ import org.eclipse.keypop.calypso.crypto.asymmetric.certificate.CertificateValid
 /**
  * SPI dedicated to Primary Certification Authority (PCA) certificate management.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_PcaCertificateSpi">PcaCertificateSpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface PcaCertificateSpi {
@@ -32,6 +36,10 @@ public interface PcaCertificateSpi {
    * the issuer but also conforms to the expected standards and requirements.
    *
    * <p>Note: The certificate is expected to be self-signed in this context.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_PcaCertificateSpi_checkCertificateAndGetContent">PcaCertificateSpi.checkCertificateAndGetContent</a>
+   * for the normative contract.
    *
    * @return A non-null reference.
    * @throws CertificateValidationException If the certificate is invalid, expired, revoked, or

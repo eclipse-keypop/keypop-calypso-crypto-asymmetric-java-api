@@ -12,14 +12,18 @@
 package org.eclipse.keypop.calypso.crypto.asymmetric;
 
 /**
- * API properties.
+ * Immutable properties of the Asymmetric Crypto API.
+ *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_AsymmetricCryptoApiProperties">AsymmetricCryptoApiProperties</a>
+ * for the normative contract.
  *
  * @since 0.2.0
  */
 public final class AsymmetricCryptoApiProperties {
 
   /**
-   * API version: {@value}
+   * Version of the API implemented by this binding, as a "MAJOR.MINOR" dotted decimal: {@value}
    *
    * @since 0.2.0
    */

@@ -14,12 +14,20 @@ package org.eclipse.keypop.calypso.crypto.asymmetric.transaction.spi;
 /**
  * Factory of {@link AsymmetricCryptoCardTransactionManagerSpi}.
  *
+ * <p>See <a
+ * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#type_AsymmetricCryptoCardTransactionManagerFactorySpi">AsymmetricCryptoCardTransactionManagerFactorySpi</a>
+ * for the normative contract.
+ *
  * @since 0.2.0
  */
 public interface AsymmetricCryptoCardTransactionManagerFactorySpi {
 
   /**
    * Returns a new instance of {@link AsymmetricCryptoCardTransactionManagerSpi}.
+   *
+   * <p>See <a
+   * href="https://docs.terminal-api.calypsonet.org/calypsonet-terminal-calypso-crypto-asymmetric-uml-api/0.2.1-SNAPSHOT/YYMMDD-SP-CNATerminalAPI-CalypsoCryptoAsymmetric_v0.2.1-SNAPSHOT.html#op_AsymmetricCryptoCardTransactionManagerFactorySpi_createCardTransactionManager">AsymmetricCryptoCardTransactionManagerFactorySpi.createCardTransactionManager</a>
+   * for the normative contract.
    *
    * @return A non-null reference.
    * @since 0.2.0
